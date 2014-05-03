@@ -29,7 +29,7 @@ PkgConfigBR:
     - Qt5PrintSupport
     - Qt5Quick
     - Qt5Concurrent
-    - Qt0Location
+    - Qt5Location
     - Qt5WebKit
     - Qt5WebKitWidgets
 Configure: none
