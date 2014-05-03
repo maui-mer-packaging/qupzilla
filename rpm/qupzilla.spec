@@ -90,5 +90,6 @@ desktop-file-install --delete-original       \
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/icons/hicolor
 %{_datadir}/%{name}/
+%{_datadir}/bash-completion/completions/%{name}
 # >> files
 # << files
