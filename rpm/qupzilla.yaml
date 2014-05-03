@@ -1,0 +1,45 @@
+Name:           qupzilla
+Summary:        A very fast open source browser based on WebKit core
+Version:        1.4.4
+Release:        1
+Group:          Applications/System
+License:        GPL-3.0+
+URL:            http://qupzilla.com/
+Sources:
+    - "%{name}-%{version}.tar.xz"
+SetupOptions: -q -n %{name}-%{version}/upstream
+Description: |
+    QupZilla is a new and very fast World Wide Web Browser
+    which uses Qt Framework and its QtWebKit rendering core.
+    It is a lightweight browser with some advanced functions
+    like integrated AdBlock, Search Engines Manager, Theming
+    support, Speed Dial and SSL Certificate manager.
+PkgBR:
+    - fdupes
+    - gcc-c++
+    - qt5-qttools-linguist
+PkgConfigBR:
+#    - x11-xcb
+    - Qt5Core
+    - Qt5Gui
+    - Qt5Network
+    - Qt5DBus
+    - Qt5Script
+    - Qt5Sql
+    - Qt5PrintSupport
+    - Qt5Quick
+    - Qt5Concurrent
+    - Qt0Location
+    - Qt5WebKit
+    - Qt5WebKitWidgets
+Configure: none
+Builder: qmake5
+Files:
+    - "%doc AUTHORS COPYRIGHT FAQ GPLv3"
+    - "%{_bindir}/%{name}"
+    - "%{_libdir}/libQupZilla.so.*"
+    - "%{_libdir}/%{name}/"
+    - "%{_datadir}/applications/%{name}.desktop"
+    - "%{_datadir}/pixmaps/%{name}.png"
+    - "%{_datadir}/icons/hicolor"
+    - "%{_datadir}/%{name}/"
