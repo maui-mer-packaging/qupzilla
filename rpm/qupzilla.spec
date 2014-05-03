@@ -67,6 +67,9 @@ rm -rf %{buildroot}
 %qmake5_install
 
 # >> install post
+%fdupes %{buildroot}%{_datadir}
+rm -vf %{buildroot}%{_libdir}/libQupZilla.so
+rm -vf %{buildroot}%{_libdir}/qupzilla/libTestPlugin.so
 # << install post
 
 desktop-file-install --delete-original       \
